@@ -35,3 +35,5 @@ A feature of this bot is it supports multiple programming languages. The languag
 
 - Ruby -  `!rb <command>`
 - Javascript `!js <command>`
+
+You can see a list of all the available commands with `!help`
