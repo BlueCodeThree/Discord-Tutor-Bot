@@ -2,10 +2,15 @@
 # by Carlie Hamilton
 # https://github.com/BlueCodeThree/Discord-Tutor-Bot
 
+# TODO
+# random welcome message if you say hi to the bot
+# maybe some jokes? Programmer jokes? Programmer memes?
+
 require 'discordrb'
 require './config.rb'
-require './language/ruby.rb'
-require './language/javascript.rb'
+require './languages/ruby.rb'
+require './languages/javascript.rb'
+require './languages/commands.rb'
 
 prefix = "!"
 
@@ -13,6 +18,10 @@ prefix = "!"
 bot = Discordrb::Bot.new token: TOKEN, client_id: CLIENT
 bot.ready do |event|
     puts "Logged in as #{bot.profile.username} (ID:#{bot.profile.id}) | #{bot.servers.size} servers"
+end
+
+bot.message(with_text: prefix + 'help') do |event|
+    event.respond ALL_COMMANDS      
 end
 
 # GENERAL FUN
