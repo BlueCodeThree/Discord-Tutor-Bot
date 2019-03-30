@@ -11,7 +11,7 @@ To run the bot, type `ruby tutorbot.rb` in terminal. The Bot will then come onli
 
 To get help from the bot, you need to type `!` and then a two letter code your your language to access, a space, and then a keyword to access what you would like information about. 
 
-For instance, typing `!rb puts` - the bot will return with: 
+For instance, typing `!rb puts` - the bot will return something like: 
 
 ``` 
     puts "Hello World"
@@ -29,11 +29,8 @@ For instance, typing `!rb puts` - the bot will return with:
     print "a", "b"
     
     # 'p' acts like .inspect
-
-#You can put sums inside the string
-`puts "Here is a string with math #{3 + 5}"`
 ```
 
-The languages this bot supports so far:
+A feature of this bot is it supports multiple programming languages. The languages this bot supports so far are:
 
-- Ruby `!rb <command>`
+- Ruby -  `!rb <command>`
