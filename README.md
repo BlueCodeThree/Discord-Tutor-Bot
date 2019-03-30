@@ -34,3 +34,4 @@ For instance, typing `!rb puts` - the bot will return something like:
 A feature of this bot is it supports multiple programming languages. The languages this bot supports so far are:
 
 - Ruby -  `!rb <command>`
+- Javascript `!js <command>`

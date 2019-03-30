@@ -5,11 +5,21 @@
 require 'discordrb'
 require './config.rb'
 require './ruby.rb'
+require './javascript.rb'
 
 prefix = "!"
 
 # Bot info
 bot = Discordrb::Bot.new token: TOKEN, client_id: CLIENT
+
+## JAVASCRIPT -- alphabetical order
+bot.message(with_text: prefix + 'js comment') do |event|
+    event.respond JS_COMMENT_ANSWER
+end
+
+bot.message(with_text: prefix + 'js if') do |event|
+    event.respond JS_IF_ANSWER
+end
 
 ## RUBY -- hopefully in alphabetical order
 bot.message(with_text: prefix + 'rb array') do |event|
