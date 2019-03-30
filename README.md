@@ -13,7 +13,7 @@ To get help from the bot, you need to type `!` and then a two letter code your y
 
 For instance, typing `!rb puts` - the bot will return with: 
 
-```
+``` 
     puts "Hello World"
 
     # puts can print multiple things, each on a new line
