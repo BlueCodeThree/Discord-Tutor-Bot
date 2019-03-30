@@ -4,13 +4,21 @@
 
 require 'discordrb'
 require './config.rb'
-require './ruby.rb'
-require './javascript.rb'
+require './language/ruby.rb'
+require './language/javascript.rb'
 
 prefix = "!"
 
 # Bot info
 bot = Discordrb::Bot.new token: TOKEN, client_id: CLIENT
+bot.ready do |event|
+    puts "Logged in as #{bot.profile.username} (ID:#{bot.profile.id}) | #{bot.servers.size} servers"
+end
+
+# GENERAL FUN
+bot.message(with_text: 'hi bot') do |event|
+    event.respond "Hi #{event.author.mention}!"
+end
 
 ## JAVASCRIPT -- alphabetical order
 bot.message(with_text: prefix + 'js comment') do |event|
@@ -112,3 +120,4 @@ end
  
 # Wake up the bot!
 bot.run
+event.bot.game=('with your heart')
