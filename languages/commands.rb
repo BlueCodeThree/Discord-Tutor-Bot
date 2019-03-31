@@ -21,6 +21,7 @@ ALL_COMMANDS = %q(
 `!rb length`
 `!rb loop`
 `!rb next`
+`!rb password`
 `!rb print`
 `!rb puts`
 `!rb range`
@@ -28,4 +29,6 @@ ALL_COMMANDS = %q(
 `!rb time`
 `!rb unless`
 `!rb while`
+`!rb yaml`
+`!rb yml`
 )

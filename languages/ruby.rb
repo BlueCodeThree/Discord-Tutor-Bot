@@ -45,6 +45,7 @@ CONVERT_ANSWER = %q(
 ```variable_name.to_s # to string
 variable_name.to_f # to float
 variable_name.to_i # to integer
+variable_name.to_yaml # to yaml format
 ```
 )
 
@@ -182,6 +183,16 @@ end
     ```
 )
 
+PASSWORD_ANSWER = %q(
+**Passwords**
+
+_Dependency_
+`require 'io/console'`
+
+_Gets password_
+`password_guess = IO::console.getpass`
+)
+
 PRINT_ANSWER = %q(
 **puts / print**
 `puts "Hello World"`
@@ -232,4 +243,17 @@ gets the time right now
     Time.now.year # for example, returns 2019
     ```
  reference: http://ruby-doc.org/core-2.2.0/Time.html
+)
+
+YAML_ANSWER = %q(
+**Yaml Files**
+
+_require yaml file_
+`require 'yaml'`
+
+_saving information to yaml_
+`File.write('file_name.yml', variable_name.to_yaml)`
+
+_opening yaml file_
+`variable_name = YAML.load_file('file_name.yml')`
 )

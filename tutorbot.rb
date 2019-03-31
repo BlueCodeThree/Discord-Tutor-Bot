@@ -95,6 +95,10 @@ bot.message(with_text: prefix + 'rb next') do |event|
     event.respond LOOP_ANSWER
 end
 
+bot.message(with_text: prefix + 'rb password') do |event|
+    event.respond PASSWORD_ANSWER
+  end
+
 bot.message(with_text: prefix + 'rb print') do |event|
   event.respond PRINT_ANSWER
 end
@@ -125,6 +129,14 @@ end
 
 bot.message(with_text: prefix + 'rb while') do |event|
     event.respond LOOP_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb yaml') do |event|
+    event.respond YAML_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb yml') do |event|
+    event.respond YAML_ANSWER
 end
  
 # Wake up the bot!
