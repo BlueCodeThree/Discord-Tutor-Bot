@@ -4,13 +4,16 @@
 
 # TODO
 # random welcome message if you say hi to the bot
-# maybe some jokes? Programmer jokes? Programmer memes?
+# maybe some jokes? Programmer jokes? Programmer memes? -- tell a random joke
 
 require 'discordrb'
 require './config.rb'
 require './languages/ruby.rb'
 require './languages/javascript.rb'
 require './languages/commands.rb'
+require './languages/vim.rb'
+require './languages/git.rb'
+require './languages/personal.rb'
 
 prefix = "!"
 
@@ -24,9 +27,19 @@ bot.message(with_text: prefix + 'help') do |event|
     event.respond ALL_COMMANDS      
 end
 
+# CARLIE'S STUFF
+bot.message(with_text: prefix + 'carlie git') do |event|
+    event.respond CARLIE_GIT
+end
+
 # GENERAL FUN
 bot.message(with_text: 'hi bot') do |event|
     event.respond "Hi #{event.author.mention}!"
+end
+
+# GIT
+bot.message(with_text: prefix + 'git new') do |event|
+    event.respond GIT_NEW
 end
 
 ## JAVASCRIPT -- alphabetical order
@@ -137,6 +150,31 @@ end
 
 bot.message(with_text: prefix + 'rb yml') do |event|
     event.respond YAML_ANSWER
+end
+
+# VIM
+bot.message(with_text: prefix + 'vim copy') do |event|
+    event.respond VIM_COPY_PASTE
+end
+
+bot.message(with_text: prefix + 'vim delete') do |event|
+    event.respond VIM_DELETE_ANSWER
+end
+
+bot.message(with_text: prefix + 'vim edit') do |event|
+    event.respond VIM_EDIT_ANSWER
+end
+
+bot.message(with_text: prefix + 'vim exit') do |event|
+    event.respond VIM_EXIT_ANSWER
+end
+
+bot.message(with_text: prefix + 'vim move') do |event|
+    event.respond VIM_MOVE_ANSWER
+end
+
+bot.message(with_text: prefix + 'vim paste#') do |event|
+    event.respond VIM_COPY_PASTE
 end
  
 # Wake up the bot!

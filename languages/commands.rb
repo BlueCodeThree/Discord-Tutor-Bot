@@ -2,6 +2,9 @@ ALL_COMMANDS = %q(
 `!help` - this menu you're in
 `hi bot` - welcome message
 
+**-- GIT --**
+`!git new`
+
 **-- JAVASCRIPT--**
 `!js comment`
 `!js if`
@@ -31,4 +34,12 @@ ALL_COMMANDS = %q(
 `!rb while`
 `!rb yaml`
 `!rb yml`
+
+**-- VIM --**
+`!vim copy`
+`!vim delete`
+`!vim edit`
+`!vim exit`
+`!vim move`
+`!vim paste`
 )

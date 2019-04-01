@@ -8,6 +8,10 @@ Create an array with three items:
 Create an empty array with bracket notation:
 `array = []`
 
+Create an array from a string:
+```"abc".chars
+#=> ["a", "b", "c"]```
+
 Create an array using brackets with three items:
 `array = ["milk", "eggs", "bread"]`
 
@@ -17,6 +21,12 @@ Create an array using the %w notation which contains three strings:
 Create an array using the %W notation which contains three strings and one is interpolated:
 ```item = “milk”
 array = %W(#{item} eggs bread)```
+
+Create an array using a range
+```a = (1..7).to_a
+#=> [1, 2, 3, 4, 5, 6, 7]
+b = ("a".."d").to_a
+#=> [a, b, c, d]```
 
 How to cycle through arrays - for loop
 ```numbers = [1, 2, 3, 4, 5]
@@ -46,6 +56,7 @@ CONVERT_ANSWER = %q(
 variable_name.to_f # to float
 variable_name.to_i # to integer
 variable_name.to_yaml # to yaml format
+variable_name.to_a # converts to array
 ```
 )
 
@@ -104,9 +115,15 @@ end```
         
 Another way to do if statements:
 `puts "you're young" if age < 30`
+`puts "wear something warm" if (raining and temperature < 20)
 
+**Ternary**
 If age is bigger than or equal to 30, it'll puts "Old", else puts "Young"
 `puts (age >= 30) ? "Old" : "Young"`
+Another example:
+`raining ? (puts "Bring an umbrella") : (puts "Enjoy the sunshine")`
+Note the brackets when text longer than a word...
+
 
 **'unless'** is confusing and means the opposite of 'if', so it runs if the parameters are false.
 ```unless variable >= 50 # variable is NOT bigger than or equal to 50
@@ -122,6 +139,20 @@ when "apple"
     # do this
 else 
     # this ```
+
+Case can have multiple items and also a range. 
+Can also do a conditional statement if you put the variable again
+```age = 42
+case age
+when 0...12
+    puts "child"
+when 13, 14, 15, 16, 17
+    puts "teenager"
+when age > 50
+    puts "you're old"
+else
+    puts "adult"
+end```
 )
 
 LENGTH_ANSWER = %q(
@@ -142,6 +173,10 @@ break ends the loop.
 end
 ```
 So in the above example, the loop skips over the number if it is odd, and puts the number if it is not odd, and breaks if x is bigger than or equal to 10.
+
+Also note:
+`redo` causes the current loop iteration to repeat
+`retry` causes the whole loop to start again from the begining
 
 **While**
 ```while y <= 10
@@ -181,6 +216,11 @@ for year in 2000...2015
     puts year
 end
     ```
+Two dots means it is inclusive of the two numbers
+`0..2` # 0, 1, 2
+
+Three dots means it is exclusive of the last number
+`0...2` # 0, 1
 )
 
 PASSWORD_ANSWER = %q(
@@ -234,6 +274,36 @@ puts "Consonants: " + full_name.count("^aeiou").to_s```
 
 ```full_name.include?("Justine") # will say either true or false
 full_name.index("Justine").to_s # the number index where this text occurs```
+
+Create an array from a string:
+```"abc".chars
+#=> ["a", "b", "c"]```
+
+`“abc”.capitalize`
+
+`“ABc”.downcase`
+
+`“abc”.upcase`
+
+```"abc".empty?
+#=> false```
+
+`"abc".start_with?("a")`
+
+`"abc".end_with?("b")`
+
+`"abc".index("c")`
+Starts with 0 like arrays
+
+Gets rid of whitespace at begining and end (enter, tabs, spaces etc)
+`“ abc \n“.strip`
+`“abc\n”.chomp`
+
+```“abc”.reverse
+#=> "cba"```
+
+```“aabc”.delete(“a”)
+#=> "bc"```
 )
 
 TIME_ANSWER = %q(
