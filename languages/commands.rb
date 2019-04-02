@@ -3,6 +3,8 @@ ALL_COMMANDS = %q(
 `hi bot` - welcome message
 
 **-- GIT --**
+`!git change remote`
+`!git checkout`
 `!git new`
 
 **-- JAVASCRIPT--**

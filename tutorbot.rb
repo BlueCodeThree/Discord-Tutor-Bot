@@ -38,6 +38,14 @@ bot.message(with_text: 'hi bot') do |event|
 end
 
 # GIT
+bot.message(with_text: prefix + 'git change remote') do |event|
+    event.respond GIT_CHANGE_REMOTE
+end
+
+bot.message(with_text: prefix + 'git checkout') do |event|
+    event.respond GIT_CHECKOUT
+end
+
 bot.message(with_text: prefix + 'git new') do |event|
     event.respond GIT_NEW
 end

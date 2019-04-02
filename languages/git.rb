@@ -1,3 +1,19 @@
+GIT_CHANGE_REMOTE = %q(
+To change the origin 
+`git remote set-url origin git@github.com:UserName/Repo-Name.git`
+)
+
+GIT_CHECKOUT = %q(
+See the branches of your repository
+`git branch`
+
+Change branch to master
+`git checkout master`
+
+Make a new branch
+`git checkout -b <branch name>`
+)
+
 GIT_NEW = %q(
 create new repo from command line:
 `curl -u 'UserName' https://api.github.com/users/repos -d '{"name":"REPO-NAME","description":"Enter your description here"}'`
