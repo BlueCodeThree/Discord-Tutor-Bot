@@ -5,6 +5,7 @@ ALL_COMMANDS = %q(
 **-- GIT --**
 `!git change remote`
 `!git checkout`
+`!git config`
 `!git new`
 
 **-- JAVASCRIPT--**

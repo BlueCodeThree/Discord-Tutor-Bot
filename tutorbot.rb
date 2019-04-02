@@ -46,6 +46,10 @@ bot.message(with_text: prefix + 'git checkout') do |event|
     event.respond GIT_CHECKOUT
 end
 
+bot.message(with_text: prefix + 'git config') do |event|
+    event.respond GIT_CONFIG
+end
+
 bot.message(with_text: prefix + 'git new') do |event|
     event.respond GIT_NEW
 end

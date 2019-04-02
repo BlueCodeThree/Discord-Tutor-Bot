@@ -14,6 +14,14 @@ Make a new branch
 `git checkout -b <branch name>`
 )
 
+GIT_CONFIG = %q(
+List your git config settings
+`git config --list`
+
+Change your email address
+`git config --global user.email "email@email.com"`
+)
+
 GIT_NEW = %q(
 create new repo from command line:
 `curl -u 'UserName' https://api.github.com/users/repos -d '{"name":"REPO-NAME","description":"Enter your description here"}'`
