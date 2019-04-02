@@ -54,6 +54,7 @@ end
 ## RUBY -- hopefully in alphabetical order
 bot.message(with_text: prefix + 'rb array') do |event|
     event.respond ARRAY_ANSWER
+    event.respond ARRAY2_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb case') do |event|
@@ -98,9 +99,17 @@ end
 
 bot.message(with_text: prefix + 'rb length') do |event|
     event.respond LENGTH_ANSWER
+end 
+
+bot.message(with_text: prefix + 'rb method') do |event|
+    event.respond FUNCTION_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb loop') do |event|
+    event.respond LOOP_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb loops') do |event|
     event.respond LOOP_ANSWER
 end
 
@@ -153,6 +162,10 @@ bot.message(with_text: prefix + 'rb yml') do |event|
 end
 
 # VIM
+bot.message(with_text: prefix + 'vim change') do |event|
+    event.respond VIM_CHANGE
+end
+
 bot.message(with_text: prefix + 'vim copy') do |event|
     event.respond VIM_COPY_PASTE
 end
@@ -167,6 +180,10 @@ end
 
 bot.message(with_text: prefix + 'vim exit') do |event|
     event.respond VIM_EXIT_ANSWER
+end
+
+bot.message(with_text: prefix + 'vim go') do |event|
+    event.respond VIM_GO
 end
 
 bot.message(with_text: prefix + 'vim move') do |event|

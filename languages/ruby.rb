@@ -44,10 +44,71 @@ groceries.each do |food|
 end
 ``` 
 
+**Arrays are 0 indexed, starts from 0**
+
 Items can be added to the end of an array by using either push or <<
 ```arr = [1, 2, 3, 4]
 arr.push(5) #=> [1, 2, 3, 4, 5]
 arr << 6    #=> [1, 2, 3, 4, 5, 6]```
+
+)
+
+ARRAY2_ANSWER = %q(
+
+
+**Add items** to the start of the array
+`arr.unshift(0) #=> [0, 1, 2, 3, 4, 5, 6]`
+
+Insert at any point
+`arr.insert(3, "apple") #=> [0, 1, 2, 'apple', 3, 4, 5, 6]`
+Insert mulitple things at once
+```arr.insert(3, 'orange', 'pear', 'grapefruit')
+#=> [0, 1, 2, "orange", "pear", "grapefruit", "apple", 3, 4, 5, 6]```
+
+**Removing Items**
+last element with pop
+```arr =  [1, 2, 3, 4, 5, 6]
+arr.pop #=> 6
+arr #=> [1, 2, 3, 4, 5]```
+
+To retrieve and at the same time remove the first item, use shift
+```arr.shift #=> 1
+arr #=> [2, 3, 4, 5]```
+
+Deletes all the same
+```arr = [1, 1, 3, 4]
+arr.delete #=> [3, 4]```
+
+To delete at a particular index:
+```arr.delete_at(2) #=> 4
+arr #=> [2, 3, 5]```
+
+To delete an element anywhere in the array
+```arr = [1, 2, 2, 3]
+arr.delete(2) #=> 2
+arr #=> [1,3]```
+
+Remove duplicate elements - non distructive uniq and distructive uniq!
+```arr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]
+arr.uniq #=> [2, 5, 6, 556, 8, 9, 0, 123]```
+
+To replace an item in an array
+```arr = ["Dog", "Duck", "Mouse"]
+arr[arr.index("Dog")] = "Cat"```
+
+To sort an array - numbers and also alphabetically
+`arr.sort`
+
+**Joining Arrays**
+Concatenate
+`[1, 2, 2, 3] + [2, 2, 3, 4]  #=> [1, 2, 2, 3, 2, 2, 3, 4]`
+
+Set intersection
+`[1, 2, 2, 3]  &  [2, 2, 3, 4] #=> [2, 3]`
+
+Combine two arrays without duplication - Set Union
+`[1, 2, 3]  |  [2, 3, 4] #=> [1, 2, 3, 4]`
+
 )
 
 CONVERT_ANSWER = %q(
@@ -88,7 +149,7 @@ end
 FUNCTION_ANSWER = %q(
     **Function/ Method for ruby**
 Note that there is no ":" etc. 
-    ```def functionName(stuff, here)
+    ```def method_name(parameters, here)
         # things for the function go here
     end
         ```
@@ -115,7 +176,7 @@ end```
         
 Another way to do if statements:
 `puts "you're young" if age < 30`
-`puts "wear something warm" if (raining and temperature < 20)
+`puts "wear something warm" if (raining and temperature < 20`)
 
 **Ternary**
 If age is bigger than or equal to 30, it'll puts "Old", else puts "Young"
@@ -191,6 +252,13 @@ end```
     puts a
 end
 ```
+**Times do**
+```4.times do
+    puts "hello"
+end```
+change the number, does it set amount of times
+
+
 How to cycle through arrays - for loop
 ```numbers = [1, 2, 3, 4, 5]
 
@@ -207,6 +275,8 @@ groceries.each do |food|
 end
 ``` 
 
+`animals.each {|animal| puts "animal is #{animal}"}
+
 cycling through numbers - a range:
 ```(1..10).each do |i|
     puts "number #{i}"
@@ -217,10 +287,10 @@ for year in 2000...2015
 end
     ```
 Two dots means it is inclusive of the two numbers
-`0..2` # 0, 1, 2
+`0..2 #=> 0, 1, 2`
 
 Three dots means it is exclusive of the last number
-`0...2` # 0, 1
+`0...2 #=> 0, 1`
 )
 
 PASSWORD_ANSWER = %q(

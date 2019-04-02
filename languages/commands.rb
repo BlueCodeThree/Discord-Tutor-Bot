@@ -23,6 +23,7 @@ ALL_COMMANDS = %q(
 `!rb input`
 `!rb length`
 `!rb loop`
+`!rb method`
 `!rb next`
 `!rb password`
 `!rb print`
@@ -36,10 +37,12 @@ ALL_COMMANDS = %q(
 `!rb yml`
 
 **-- VIM --**
+`!vim change`
 `!vim copy`
 `!vim delete`
 `!vim edit`
 `!vim exit`
+`!vim go`
 `!vim move`
 `!vim paste`
 )

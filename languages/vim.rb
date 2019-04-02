@@ -1,3 +1,14 @@
+VIM_CHANGE = %q(
+c - change
+works like delete, and then you can type. 
+
+cw - delete word, then type new word
+c$ - delete until end of line, then type
+ce - delete til end of word, then type
+
+c2w - change two words
+)
+
 VIM_COPY_PASTE = %q(
 p - paste previously deleted text after cursor
 )
@@ -31,6 +42,14 @@ ce - correct word til the end - type 'ce' then type out the correct letters for 
 VIM_EXIT_ANSWER = %q(
 :q!<enter> - exit without saving
 :wq - save and quit
+)
+
+VIM_GO = %q(
+ctrl + g - shows the current line
+
+G - moves to the bottom of the file
+g - moves to the top of the file
+<line no.> G - moves to that line number
 )
 
 VIM_MOVE_ANSWER = %q(
