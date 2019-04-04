@@ -15,6 +15,7 @@ ALL_COMMANDS = %q(
 **-- RUBY --**
 `!rb array`
 `!rb case`
+`!rb clear`
 `!rb conditionals`
 `!rb convert`
 `!rb each`
@@ -22,6 +23,7 @@ ALL_COMMANDS = %q(
 `!rb for`
 `!rb function`
 `!rb gets`
+`!rb hash`
 `!rb if`
 `!rb input`
 `!rb length`
@@ -32,6 +34,7 @@ ALL_COMMANDS = %q(
 `!rb print`
 `!rb puts`
 `!rb range`
+`!rb shebang`
 `!rb string`
 `!rb time`
 `!rb unless`

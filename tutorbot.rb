@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby 
+
 # Discord Programming Tutor Bot
 # by Carlie Hamilton
 # https://github.com/BlueCodeThree/Discord-Tutor-Bot
@@ -67,10 +69,15 @@ end
 bot.message(with_text: prefix + 'rb array') do |event|
     event.respond ARRAY_ANSWER
     event.respond ARRAY2_ANSWER
+    event.respond ARRAY3_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb case') do |event|
     event.respond IF_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb clear') do |event|
+    event.respond CLEAR_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb conditional') do |event|
@@ -99,6 +106,16 @@ end
 
 bot.message(with_text: prefix + 'rb gets') do |event|
     event.respond GETS_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb hash') do |event|
+    event.respond HASH_ANSWER
+    event.respond HASH2_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb hashes') do |event|
+    event.respond HASH_ANSWER
+    event.respond HASH2_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb if') do |event|
@@ -143,6 +160,10 @@ bot.message(with_text: prefix + 'rb puts') do |event|
 
   bot.message(with_text: prefix + 'rb range') do |event|
     event.respond LOOP_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb shebang') do |event|
+    event.respond SHEBANG_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb string') do |event|

@@ -109,6 +109,42 @@ Set intersection
 Combine two arrays without duplication - Set Union
 `[1, 2, 3]  |  [2, 3, 4] #=> [1, 2, 3, 4]`
 
+
+)
+
+ARRAY3_ANSWER = %q(
+
+
+**Working with an array of hashes**
+```#this is your array of hashes only 2 for this example but add as may as you want
+list = [
+        {key1: "value1", 
+         key2: "value2", 
+         key3: "value3"}, 
+        
+        {key1: "value1", 
+         key2: "value2", 
+         key3: "value3"}
+        ]
+
+#function to iterate through a array of hashes and display certain key
+def displaylistOfHashes(list) #list will be your array of hashes 
+    list.each do |element| #for each elements hashes in list(array of hashes)
+        puts "#{element[:key1]} #{element[:key2]} #{element[:key3]}" #print the value of  :key1, :key2 and :key3 for each hash in list(array of hashes)
+    end
+end
+
+#call the function and pass it your array of hashes 
+displaylistOfHashes(list)```
+
+The output of above: 
+```value1 value2 value3
+value1 value2 value3```
+)
+
+CLEAR_ANSWER = %q(
+To clear the terminal
+`puts "\e[2J\e[f"`
 )
 
 CONVERT_ANSWER = %q(
@@ -157,11 +193,126 @@ No need for the brackets if you don't have any parameters.
 )
 
 GETS_ANSWER = %q(
-    asks for user input. The "chomp" removes an enter key at the end of the input
-    `gets.chomp`
+asks for user input. The "chomp" removes an enter key at the end of the input
+`gets.chomp`
 
-    string on more methods!
-    `gets.chomp.to_i`
+string on more methods!
+`gets.chomp.to_i`
+)
+
+HASH_ANSWER = %q(
+**HASH / DICTIONARY**
+
+**create a hash**
+Some different ways to create a hash
+`grades = { "Jane Doe" => 10, "Jim Doe" => 6 }`
+
+`options = { :font_size => 10, :font_family => "Arial" }`
+
+`options = { font_size: 10, font_family: "Arial" }`
+
+
+Array of Hashes example (list of dictionaries)
+```[ { name: “Charles”, birth_year: 1990, fav_colour: “green” },
+{ name: “Zoey”, birth_year: 2003, fav_colour: “red” },
+{ name: “Frank”, birth_year: 1998, fav_colour: “blue” },
+{ name: “Ellen”, birth_year: 1975, fav_colour: “yellow” } ] 
+  ```
+
+Hash with an array in it (dictionary with a list within it)
+`{ name: “Charles”, friends: [{name: “Zoey”}, {name: “Frank”}, {name: “Ellen}]} `
+
+You can create new key/value pair:
+`grades["Dorothy"] = 9`
+
+or
+`Person[:fav_colour] = “green”`
+
+
+
+**How to access the value:**
+Access a value by calling for it's key
+`options[:font_size]  #=> 10`
+
+
+Does it have this key?
+`person.has_key?(:name)   #=> returns true of false`
+
+Does it have this value?
+`person.has_value?(“Charles”) #=> true or false`
+
+What is the key for this value?
+`person.key(“Charles”)   #=> :name`
+
+How many keys?
+`person.length`
+
+Return the values as an array
+`person.values`
+Handy for loops, i.e. `person.values.each`
+
+Return the keys as an array
+`person.keys`
+
+
+**Deleting**
+
+clear the array
+`person.clear`
+
+delete a key
+`person.delete(:fav_colour)`
+)
+
+HASH2_ANSWER = %q(
+
+
+    **Iteration**
+```person.each
+person.each_key
+person.each_value
+```
+
+iterate over both keys and values
+```person.each do |k, v|
+    puts "key: #{k}, value: #{v}
+end```
+
+iterate over keys
+```person.each_key do |k|
+    puts k
+end```
+
+iterate over values
+```person.each_value do |v|
+    puts v
+end```
+
+**Working with an array of hashes**
+```#this is your array of hashes only 2 for this example but add as may as you want
+list = [
+        {key1: "value1", 
+         key2: "value2", 
+         key3: "value3"}, 
+        
+        {key1: "value1", 
+         key2: "value2", 
+         key3: "value3"}
+       ]
+
+#function to iterate through a array of hashes and display certain key
+def displaylistOfHashes(list) #list will be your array of hashes 
+    list.each do |element| #for each elements hashes in list(array of hashes)
+        puts "#{element[:key1]} #{element[:key2]} #{element[:key3]}" #print the value of  :key1, :key2 and :key3 for each hash in list(array of hashes)
+    end
+end
+
+#call the function and pass it your array of hashes 
+displaylistOfHashes(list)```
+
+The output of above: 
+```value1 value2 value3
+value1 value2 value3```
 )
 
 IF_ANSWER = %q(
@@ -275,7 +426,7 @@ groceries.each do |food|
 end
 ``` 
 
-`animals.each {|animal| puts "animal is #{animal}"}
+`animals.each {|animal| puts "animal is #{animal}"}`
 
 cycling through numbers - a range:
 ```(1..10).each do |i|
@@ -327,6 +478,13 @@ You can put sums inside the string
 `puts "Here is a string with math #{3 + 5}"`
  )  
 
+SHEBANG_ANSWER = %q(
+To run a file with a shebang, place this at the top of your file:
+`#!/usr/bin/env ruby`
+and then, run the file in terminal with:
+`./filename.rb`
+)
+
 STRING_ANSWER = %q(
     **Stuff about strings in ruby**
 `variable_name.to_s  # convert to string`
@@ -355,6 +513,8 @@ Create an array from a string:
 
 `“abc”.upcase`
 
+`"abc".swapcase`
+
 ```"abc".empty?
 #=> false```
 
@@ -365,9 +525,27 @@ Create an array from a string:
 `"abc".index("c")`
 Starts with 0 like arrays
 
+**Whitespace**
 Gets rid of whitespace at begining and end (enter, tabs, spaces etc)
 `“ abc \n“.strip`
+
 `“abc\n”.chomp`
+
+Strip blank space from either the left or right
+```variable.lstrip
+variable.rstrip```
+
+all white space
+`variable.strip`
+
+**Formatting**
+```puts variable_name.rjust(20, ",")
+puts variable_name.ljust(20, "*")
+puts variable_name.center(20, " ")```
+right justified, left justified and center.
+In brakets the amount of spaces and what is filled in those spaces
+
+
 
 ```“abc”.reverse
 #=> "cba"```
