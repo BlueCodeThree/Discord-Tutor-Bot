@@ -76,6 +76,14 @@ bot.message(with_text: prefix + 'rb case') do |event|
     event.respond IF_ANSWER
 end
 
+bot.message(with_text: prefix + 'rb class') do |event|
+    event.respond CLASS_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb classes') do |event|
+    event.respond CLASS_ANSWER
+end
+
 bot.message(with_text: prefix + 'rb clear') do |event|
     event.respond CLEAR_ANSWER
 end

@@ -119,12 +119,12 @@ ARRAY3_ANSWER = %q(
 ```#this is your array of hashes only 2 for this example but add as may as you want
 list = [
         {key1: "value1", 
-         key2: "value2", 
-         key3: "value3"}, 
+        key2: "value2", 
+        key3: "value3"}, 
         
         {key1: "value1", 
-         key2: "value2", 
-         key3: "value3"}
+        key2: "value2", 
+        key3: "value3"}
         ]
 
 #function to iterate through a array of hashes and display certain key
@@ -140,6 +140,67 @@ displaylistOfHashes(list)```
 The output of above: 
 ```value1 value2 value3
 value1 value2 value3```
+)
+
+CLASS_ANSWER = %q(
+   **Classes**
+
+**Define a class** - use PascalCase
+```class Calculater
+end```
+
+**Initialize on object**
+So when we create a new instance, these argumets are assigned
+required parameters first
+```class Person
+    def initialize(name, age=nil)
+        @name = name  # name stored in the instance variable @name
+        @age = age
+end
+
+Person.new("Carlie")```
+
+**Create a new instance**
+`my_calc = Calculator.new`
+
+What class is this?
+`my_calc.class #=> Calculator`
+`my_calc.is_a?(Calculator) #=> true`
+
+**Define the Behaviours**
+instance method - call it on a specific instance of the class
+```class Calculator
+    def add(number, other)
+        return number + other
+    end
+end```
+
+**Calling an Instance Method**
+`puts my_calc.add(5, 12)`
+
+**Scope and Getters**
+Instance variables of an object are _private_ - scoped to the object. Only available inside a class. 
+To access an instance variable from outside the class, we need to create an _accessor_
+A method that gets the value of an instance variable is called a _getter_ (or accessor)
+```def name
+    return @name
+end```
+
+**Setters**
+```def name=(new_name)
+    @name = new_name
+end```
+By appending the = symbol to the method name, this is a setter. Now can change name outside the class.
+```person = Person.new("Carlie")
+person.name = "Giselda"
+puts person.name```
+
+**Attr_Accessor**
+automatically creates the getters and setters
+`attr_accessr :name :age`
+
+only a getter
+`attr_reader`
 )
 
 CLEAR_ANSWER = %q(
@@ -185,11 +246,21 @@ end
 FUNCTION_ANSWER = %q(
     **Function/ Method for ruby**
 Note that there is no ":" etc. 
+
     ```def method_name(parameters, here)
         # things for the function go here
     end
         ```
 No need for the brackets if you don't have any parameters. 
+
+To call a method, just use it's name. 
+`method_name`
+
+If you have put in parameters, you'll have to pass them in
+`method_name(1, "Sally")`
+
+In ruby, the variables within the methods have only local scope. You can't access the variable outside the method. 
+
 )
 
 GETS_ANSWER = %q(
@@ -292,13 +363,13 @@ end```
 ```#this is your array of hashes only 2 for this example but add as may as you want
 list = [
         {key1: "value1", 
-         key2: "value2", 
-         key3: "value3"}, 
+        key2: "value2", 
+        key3: "value3"}, 
         
         {key1: "value1", 
-         key2: "value2", 
-         key3: "value3"}
-       ]
+        key2: "value2", 
+        key3: "value3"}
+    ]
 
 #function to iterate through a array of hashes and display certain key
 def displaylistOfHashes(list) #list will be your array of hashes 

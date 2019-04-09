@@ -15,6 +15,7 @@ ALL_COMMANDS = %q(
 **-- RUBY --**
 `!rb array`
 `!rb case`
+`!rb class` or `!rb classes`
 `!rb clear`
 `!rb conditionals`
 `!rb convert`
