@@ -134,12 +134,20 @@ bot.message(with_text: prefix + 'rb input') do |event|
     event.respond GETS_ANSWER
 end
 
+bot.message(with_text: prefix + 'rb inheritance') do |event|
+    event.respond INHERITANCE_ANSWER
+end
+
 bot.message(with_text: prefix + 'rb length') do |event|
     event.respond LENGTH_ANSWER
 end 
 
 bot.message(with_text: prefix + 'rb method') do |event|
     event.respond FUNCTION_ANSWER
+end
+
+bot.message(with_text: prefix + 'rb module') do |event|
+    event.respond MODULE_ANSWER
 end
 
 bot.message(with_text: prefix + 'rb loop') do |event|

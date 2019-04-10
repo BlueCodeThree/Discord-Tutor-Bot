@@ -27,9 +27,11 @@ ALL_COMMANDS = %q(
 `!rb hash`
 `!rb if`
 `!rb input`
+`!rb inheritance`
 `!rb length`
 `!rb loop`
 `!rb method`
+`!rb module`
 `!rb next`
 `!rb password`
 `!rb print`

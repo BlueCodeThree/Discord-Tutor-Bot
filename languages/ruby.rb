@@ -201,6 +201,12 @@ automatically creates the getters and setters
 
 only a getter
 `attr_reader`
+
+
+We can change the defult output for .to_s (for istance, if you were just to print the object)
+```def to_s
+    return "Here will be what we want to return
+end```
 )
 
 CLEAR_ANSWER = %q(
@@ -443,6 +449,71 @@ Getting the length of a string in ruby:
     `variable_name.length`
 )
 
+INHERITANCE_ANSWER = %q(
+    **Inheritance**
+    subclass - inherits the behaviour from the superclass. 
+
+```class Animal
+    def speak
+        "Hello!"
+    end
+end
+
+# subclass of Animal
+class Dog < Animal
+end
+
+spot = Dog.new
+puts spot.speak     #=> Hello!
+
+class Cat < Animal
+    def speak
+        "Meow"
+    end
+end
+
+nala = Cat.new
+puts nala.speak     #=> Meow```
+
+**Super**
+can add things to the subclass from the superclass. 
+```class Animal
+    def speak
+        "Hello"
+    end
+end
+
+class Dog < Animal
+    def speak
+        super + " says the dog"
+    end
+end
+
+spot = Dog.new
+spot.speak          #=> "Hello says the dog"```
+
+
+A better way to add things from the super class:
+```class Animal
+attr_accessor :name
+
+def initialize(name)
+    @name = name
+end
+end
+
+class GoodDog < Animal
+def initialize(name, color)
+    super(name)
+    @color = color
+end
+end
+
+bruno = GoodDog.new("Fido", "brown")
+p bruno
+# => #<GoodDog:0x007fb40b1e6718 @color="brown", @name="Fido">```
+)
+
 LOOP_ANSWER = %q(
 **Loops/Conditionals for Ruby**
 **next** goes back to the top of the loop
@@ -513,6 +584,36 @@ Two dots means it is inclusive of the two numbers
 
 Three dots means it is exclusive of the last number
 `0...2 #=> 0, 1`
+)
+
+MODULE_ANSWER = %(
+   **Modules** 
+    Have some subclasses that have a module and some that don't
+```module Swimmable
+def swim
+    "I'm swimming!"
+end
+end
+
+class Animal
+end
+
+class Fish < Animal
+include Swimmable         # mixing in Swimmable module
+end
+
+class Cat < Animal          # most cats hate swimming!
+end
+
+class Dog < Animal
+include Swimmable         # mixing in Swimmable module
+end```
+
+Can only subclass from one class, but you can mix in as many modules as you would like. 
+If it is a "is-a" relationship choose inheritance. 
+If it is a "has-a" relationship, choose a module. 
+i.e. A dog *is an* animal --> inheritance
+    A dog *has an* ability to swim --> module. 
 )
 
 PASSWORD_ANSWER = %q(
